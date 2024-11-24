@@ -10,6 +10,6 @@ form div {
     margin-bottom: 12px;
 }
 
-.err {
+.errorMessage {
     color: red;
 }

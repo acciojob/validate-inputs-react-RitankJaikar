@@ -6,7 +6,7 @@ export default function Form() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        
+
         // Temporary object to collect all errors
         const errors = {};
 
@@ -47,22 +47,22 @@ export default function Form() {
             <div>
                 <label htmlFor="name">Name</label>
                 <input type="text" id="name" value={formData.name} onChange={e => {setFormData({...formData, name:e.target.value})}} required />
-                <div className="err">{errData.name}</div>
+                <div className="errorMessage">{errData.name}</div>
             </div>
             <div>
                 <label htmlFor="address">Address</label>
                 <input type="text" id="address" value={formData.address} onChange={e => {setFormData({...formData, address:e.target.value})}} required />
-                <div className="err">{errData.address}</div>
+                <div className="errorMessage">{errData.address}</div>
             </div>
             <div>
                 <label htmlFor="email">Email</label>
                 <input type="text" id="email" value={formData.email} onChange={e => {setFormData({...formData, email:e.target.value})}} required />
-                <div className="err">{errData.email}</div>
+                <div className="errorMessage">{errData.email}</div>
             </div>
             <div>
-                <label htmlFor="number">Number</label>
+                <label htmlFor="number">Mobile</label>
                 <input type="number" id="number" value={formData.number} onChange={e => {setFormData({...formData, number:e.target.value})}} required />
-                <div className="err">{errData.number}</div>
+                <div className="errorMessage">{errData.number}</div>
             </div>
             <button>Submit</button>
         </form>
